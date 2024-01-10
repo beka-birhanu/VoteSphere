@@ -1,4 +1,4 @@
-# VoteSphere - Group Task Manager
+# VoteSphere - Group poll Manager
 
 VoteSphere is a poll management application that allows users to work together within groups, managing polls efficiently. The application provides user authentication, authorization, and group-based poll management.
 
