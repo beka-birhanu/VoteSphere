@@ -75,7 +75,7 @@ export class AuthService {
     // Sign and return both access and refresh tokens
     const access_token = await this.jwtService.signAsync(payload);
     const refresh_token = await this.jwtService.signAsync(payload, {
-      expiresIn: '3m',
+      expiresIn: '30d',
     });
 
     return { username, role, access_token, refresh_token };
@@ -150,6 +150,15 @@ export class AuthService {
       return true;
     } catch (error) {
       return false;
+    }
+  }
+
+  // Decode the token using the JWT service
+  decodeToken(token: string): { username: string } | null {
+    try {
+      return this.jwtService.verify(token, { secret: process.env.JWT_SECRET });
+    } catch (error) {
+      return null;
     }
   }
 }
