@@ -1,6 +1,9 @@
+
 document.getElementById('createPollBtn').addEventListener('click', function() {
     window.location.href = './pole.html';
 });
+
+
 
 function toggleSidebar() {
     var sidebar = document.getElementById('sidebar');
@@ -115,5 +118,11 @@ function updateProgressBar(progressBar, choiceVotes, totalVotes) {
         progressBar.style.width = '0%';
     }
 }
+document.getElementById('membersButton').addEventListener('click', function() {
+    window.location.href = '../pages/member.html';
+});
 
 loadMyPolls();
+
+
+
