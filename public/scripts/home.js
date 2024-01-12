@@ -1,4 +1,3 @@
-
 document.getElementById('createPollBtn').addEventListener('click', function() {
     window.location.href = './pole.html';
 });
@@ -77,7 +76,7 @@ function loadMyPolls() {
                             <input type="radio" name="item${pollIndex}" class="mr-2" id="choice${pollIndex}-${choiceIndex}" onclick="vote('${pollIndex}', '${choiceIndex}')">
                             <label class="ml" for="">
                                 <p class="ml-8 inline-block">${choice}</p>
-                                <div id="progressBar${pollIndex}-${choiceIndex}" class="progress-bar bg-blue-500 h-2 rounded-full mt-1 ml-6 w-full border"></div>
+                                <div id="progressBar${pollIndex}-${choiceIndex}" class="hidden progress-bar bg-blue-500 h-2 rounded-full mt-1 ml-6 w-full border"></div>
                             </label>
                         </div>
                     </div>`;
