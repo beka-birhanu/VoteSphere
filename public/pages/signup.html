@@ -14,25 +14,25 @@
         
             <p class="text-sm text-center mt-10 mb-2">Empowering Voices, Ensuring Fairness in Every Poll.</p>
             <p class="text-sm text-center mb-6"> Welcome to VoteSphere.</p>
-            <form action="/register" method="post">
+            <form action="/signup" onsubmit="return false" method="post">
                 <div class="mb-6 mt-10">
                     <input class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block mb-1" type="text" name="name" id="name" placeholder="Enter Username"required>
                     <div class="items-center pl-16 gap-2 hidden" id="invalid_name">
                         <img class="w-3" src="../images/error.png" alt="">
                         <p class="text-xs text-red-500" >Username must only consist of letters, numbers, '.', and '_'."</p>
                     </div> 
-                    <div class="items-center pl-16 gap-2 hidden" id="taken_name">
+                    <div class="items-center pl-16 gap-2 hidden user-taken" id="taken_name">
                         <img class="w-3" src="../images/error.png" alt="">
-                        <p class="text-xs text-red-500">Username already taken</p>
+                        <p class="text-xs text-red-500 user-taken-message"></p>
                     </div>
                     
                 </div>
 
                 <div class="mb-6">
-                    <input class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block mb-1" type="email" name="email"  placeholder="Enter Email" required>
-                    <div class="items-center pl-16 gap-2 hidden" id="taken_email">
+                    <input class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block mb-1" type="email" name="email" id="reg-email"  placeholder="Enter Email" required>
+                    <div class="items-center pl-16 gap-2 hidden email-taken" id="taken_email">
                         <img class="w-3" src="../images/error.png" alt="">
-                        <p class="text-xs text-red-500">Email already taken</p>
+                        <p class="text-xs text-red-500 email-taken-message">Email already taken</p>
                     </div>
                     
                 </div>
@@ -41,7 +41,7 @@
                     <input class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block mb-1" type="password" name="password" id="reg_password" placeholder="Enter Password">
                     <div class="items-center pl-16 gap-2 hidden" id="weak_password">
                         <img class="w-3" src="../images/error.png" alt="">
-                        <p class="text-xs text-red-500">Password is not strong</p>
+                        <p class="text-xs text-red-500" id="weak-message"></p>
                     </div>
                     <div class="items-center pl-16 gap-2 hidden" id="small_password">
                         <img class="w-3" src="../images/error.png" alt="">
@@ -50,8 +50,22 @@
                     
                     
                 </div>
+                <div class=" w-3/4 mx-auto flex">
+                    <h3 class="text-xl text-indigo-950 mb-4">Register as:</h3>
+                    <div class="px-4 mt-1">
+                        <input id="user" class="px-4" type="radio" name="role" value="user" id="">
+                        <label for="user">User</label>
+                    </div>
+                    <div class="px-4 mt-1">
+                        <input id="admin" class="px-4" type="radio" name="role" value="admin" id="">
+                        <label for="user">Admin</label>
+                    </div>
+                </div>
                 
-                <input class="cursor-pointer w-3/4 mt-4 block mx-auto text-sm border rounded-md p-2 bg-blue-900 text-white submit" type="submit" value="Register" name="" id="" required>
+                    
+            
+                
+                <button class="cursor-pointer w-3/4 mt-4 block mx-auto text-sm border rounded-md p-2 bg-blue-900 text-white submit" type="submit" value="Register" name="" id="" required>Register</button>
                 <div class="text-right mr-10 mt-10">
                     <label for="">Already have an account?</label>
                     <a class="text-sm text-blue-600 underline" href="login.html">Sign in</a>
