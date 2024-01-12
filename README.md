@@ -67,3 +67,7 @@ VoteSphere utilizes MySQL, a relational database, for the following reasons:
 - **Ease of Use:** MySQL is known for its user-friendly interface and ease of administration, making it a solid choice for development teams.
 
 By choosing MySQL as the relational database, VoteSphere aims to leverage its strengths to build a robust and scalable solution for collaborative poll Smanagement.
+
+## Getting Started
+**$ yarn install**
+**$ yarn start**
