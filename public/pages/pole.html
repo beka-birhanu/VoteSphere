@@ -1,51 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-</head>
+    <link rel="icon" href="../images/vote.jpg" type="image/jpeg" />
 
-<body>
+    <title>Document</title>
+  </head>
+
+  <body>
     <section class="box border max-w-xl mx-auto my-16 p-6 rounded-lg">
-        <h2 class="text-xl text-gray-950 text-center mb-4">Enter poll details</h2>
-        <form id="pollForm" action="">
-            <div class="flex items-center gap-5 mb-4">
-                <label for="question">Question</label>:
-                <textarea class="border text-center mr-1" name="question" id="question" cols="40" rows="5"></textarea>
-            </div>
-            <div class="flex items-center gap-5 mb-4">
-                <label for="choice1">Choice1</label>:
-                <textarea class="border text-center" name="choice1" id="choice1" cols="40" rows="2" required></textarea>
-            </div>
-            <div class="flex items-center gap-5 mb-4">
-                <label for="choice2">Choice2</label>:
-                <textarea class="border text-center" name="choice2" id="choice2" cols="40" rows="2" required></textarea>
-            </div>
-            <div class="flex items-center gap-5 mb-4">
-                <label for="choice3">Choice3</label>:
-                <textarea class="border text-center" name="choice3" id="choice3" cols="40" rows="2"></textarea>
-            </div>
-            <div class="flex items-center gap-5 mb-4">
-                <label for="choice4">Choice4</label>:
-                <textarea class="border text-center" name="choice4" id="choice4" cols="40" rows="2"></textarea>
-            </div>
-            <div class="flex items-center gap-5 mb-4">
-                <label for="choice5">Choice5</label>:
-                <textarea class="border text-center" name="choice5" id="choice5" cols="40" rows="2"></textarea>
-            </div>
-        </form>
+      <h2 class="text-xl text-gray-950 text-center mb-4">Enter poll details</h2>
+      <form id="pollForm" action="">
+        <div class="flex items-center gap-5 mb-4">
+          <label for="question">Question</label>:
+          <textarea
+            class="border text-center mr-1"
+            name="question"
+            id="question"
+            cols="40"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="flex items-center gap-5 mb-4">
+          <label for="choice1">Choice1</label>:
+          <textarea
+            class="border text-center"
+            name="choice1"
+            id="choice1"
+            cols="40"
+            rows="2"
+            required
+          ></textarea>
+        </div>
+        <div class="flex items-center gap-5 mb-4">
+          <label for="choice2">Choice2</label>:
+          <textarea
+            class="border text-center"
+            name="choice2"
+            id="choice2"
+            cols="40"
+            rows="2"
+            required
+          ></textarea>
+        </div>
+        <div class="flex items-center gap-5 mb-4">
+          <label for="choice3">Choice3</label>:
+          <textarea
+            class="border text-center"
+            name="choice3"
+            id="choice3"
+            cols="40"
+            rows="2"
+          ></textarea>
+        </div>
+        <div class="flex items-center gap-5 mb-4">
+          <label for="choice4">Choice4</label>:
+          <textarea
+            class="border text-center"
+            name="choice4"
+            id="choice4"
+            cols="40"
+            rows="2"
+          ></textarea>
+        </div>
+        <div class="flex items-center gap-5 mb-4">
+          <label for="choice5">Choice5</label>:
+          <textarea
+            class="border text-center"
+            name="choice5"
+            id="choice5"
+            cols="40"
+            rows="2"
+          ></textarea>
+        </div>
+      </form>
     </section>
     <div class="w-full flex justify-center">
-        <button class="border p-3 bg-blue-900 text-white rounded-lg mx-auto hover:opacity-90" type="submit" onclick="addToMyPolls()">
-            Add to My polls
-        </button>
+      <button
+        class="border p-3 bg-blue-900 text-white rounded-lg mx-auto hover:opacity-90"
+        type="submit"
+        onclick="addToMyPolls()"
+      >
+        Add to My polls
+      </button>
     </div>
 
-    <script src="../scripts/pole.js">
-    </script>
-</body>
-
+    <script src="../scripts/pole.js"></script>
+  </body>
 </html>

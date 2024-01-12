@@ -1,50 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../images/vote.jpg" type="image/jpeg" />
+
     <title>Sign Up</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="h-screen flex justify-center items-center">
-        <section class="w-full px-4 sm:w-1/2 md:w-1/3 md:px-4 lg:w-1/3  py-10 md:mx-auto border rounded-md">
-            <img src="../images/vote.jpg" class="bloack mx-auto w-24 h-24" alt="">
-            <h2 class="text-indigo-950 text-center text-lg font-bold">VoteSphere</h2>
-            
-            <p class="text-sm text-center mt-10">Empowering Voices, Ensuring Fairness in Every Poll.</p>
-            <p class="text-sm text-center mb-6"> Welcome to VoteSphere.</p>
-            <form action="/login" onsubmit="return false" method="post">
-                <div class="mb-4">
-                    <input class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block mt-3" type="text" name="name" id="user-login" placeholder="Enter Username" id="" required>
-                    <div class="items-center pl-16 gap-2 hidden" id="user-error">
-                        <img class="w-3" src="../images/error.png" alt="">
-                        <p class="text-sm text-red-500" id="invalid-name"></p>
-                    </div>
-                    
-                </div>
-                <div class="mb-8">
-                    <input class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block" type="password" name="password" id="password-login" placeholder="Enter Password" id="" required>
-                    <div class="items-center pl-16 gap-2 hidden" id="pass-error">
-                        <img class="w-3" src="../images/error.png" alt="">
-                        <p class="text-sm text-red-500" id="invalid-password"></p>
-                    </div>
-                    
-                </div>
-                
-                <button class="cursor-pointer w-3/4 mt-4 block mx-auto text-sm border rounded-md p-2 bg-blue-900 text-white submit" type="submit" value="Login" name="" id="" required>LogIn</button>
-                
-                
-                <div class="text-right mr-10 mt-10">
-                    <label for="">Don't have an account?</label>
-                    <a class="text-sm text-blue-600 underline" href="signup.html">Sign up</a>
-                </div>
-                
-            </form>
-        </section>
-    <script src="../scripts/login.js"></script>
+      <section
+        class="w-full px-4 sm:w-1/2 md:w-1/3 md:px-4 lg:w-1/3 py-10 md:mx-auto border rounded-md"
+      >
+        <img src="../images/vote.jpg" class="bloack mx-auto w-24 h-24" alt="" />
+        <h2 class="text-indigo-950 text-center text-lg font-bold">
+          VoteSphere
+        </h2>
+
+        <p class="text-sm text-center mt-10">
+          Empowering Voices, Ensuring Fairness in Every Poll.
+        </p>
+        <p class="text-sm text-center mb-6">Welcome to VoteSphere.</p>
+        <form action="/login" onsubmit="return false" method="post">
+          <div class="mb-4">
+            <input
+              class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block mt-3"
+              type="text"
+              name="name"
+              id="user-login"
+              placeholder="Enter Username"
+              id=""
+              required
+            />
+            <div class="items-center pl-16 gap-2 hidden" id="user-error">
+              <img class="w-3" src="../images/error.png" alt="" />
+              <p class="text-sm text-red-500" id="invalid-name"></p>
+            </div>
+          </div>
+          <div class="mb-8">
+            <input
+              class="focus:opacity-50 text-sm border w-3/4 rounded-sm p-2 mx-auto block"
+              type="password"
+              name="password"
+              id="password-login"
+              placeholder="Enter Password"
+              id=""
+              required
+            />
+            <div class="items-center pl-16 gap-2 hidden" id="pass-error">
+              <img class="w-3" src="../images/error.png" alt="" />
+              <p class="text-sm text-red-500" id="invalid-password"></p>
+            </div>
+          </div>
+
+          <button
+            class="cursor-pointer w-3/4 mt-4 block mx-auto text-sm border rounded-md p-2 bg-blue-900 text-white submit"
+            type="submit"
+            value="Login"
+            name=""
+            id=""
+            required
+          >
+            LogIn
+          </button>
+
+          <div class="text-right mr-10 mt-10">
+            <label for="">Don't have an account?</label>
+            <a class="text-sm text-blue-600 underline" href="signup.html"
+              >Sign up</a
+            >
+          </div>
+        </form>
+      </section>
+      <script src="../scripts/login.js"></script>
     </div>
-       
-    
-</body>
+  </body>
 </html>

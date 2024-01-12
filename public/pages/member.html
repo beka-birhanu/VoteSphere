@@ -1,57 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../images/vote.jpg" type="image/jpeg" />
+
     <title>Document</title>
     <style>
-        .main-container{
-            width: 100%;
-            border: none;
-            border-radius: 20px;
-            background: rgba(178, 238, 255, 0.6);
-            backdrop-filter: blur(8px);
-        }
+      .main-container {
+        width: 100%;
+        border: none;
+        border-radius: 20px;
+        background: rgba(178, 238, 255, 0.6);
+        backdrop-filter: blur(8px);
+      }
 
-        .but{
-            background-color: #121111;
-            color: rgb(255, 255, 255);
-        }
+      .but {
+        background-color: #121111;
+        color: rgb(255, 255, 255);
+      }
 
-        
-        .but:active{
-            opacity: 0.8;
-        }
-
-
+      .but:active {
+        opacity: 0.8;
+      }
     </style>
-</head>
-<body class="member-body">
-    
-    <div class="outer flex flex-col justify-center mt-10 h-screen w-full ">
-        <div class="main-container flex flex-col justify-center w-4/5 mx-auto py-10 shadow-lg">
-            <div class="w-24 h-24 mx-auto object-cover">
-                <img class="w-24 h-24 rounded-lg" src="../images/group.jpg">
-            </div>
-
-            <h2 class="text-center text-4xl mt-10 "> Members </h2>
-            <div class="hidden flex rounded -md border h-16 w-96 mx-auto border-black mt-6 mb-2 my-auto" id="mem-cont"></div>
-            <button class="but w-2/5 p-2 rounded-lg block mx-auto  mt-16" id="add">Add Members</button>
-            <form class="form hidden text-center w-full mx-auto mt-10" onsubmit="return false" action="">
-                <label class="w-1/5 mx-auto mt-6 mx-3" for="">
-                    <p class="mr-10 inline-block ">
-                        Enter Username:
-                    </p>
-                </label>
-                <input class="focus:opacity-50 border p-1 w-1/4 rounded mx-auto mt-1 mx-3" class="username" type="text" name="user" required> 
-                <button class=" add-but w-12 mt-4 mx-3 text-sm rounded-md px-2 py-1 bg-black text-white" id="add-member" type="submit" value="Register" name="" id="" required onclick="AddMemberClick()">Add</button>
-            </form>
+  </head>
+  <body class="member-body">
+    <div class="outer flex flex-col justify-center mt-10 h-screen w-full">
+      <div
+        class="main-container flex flex-col justify-center w-4/5 mx-auto py-10 shadow-lg"
+      >
+        <div class="w-24 h-24 mx-auto object-cover">
+          <img class="w-24 h-24 rounded-lg" src="../images/group.jpg" />
         </div>
+
+        <h2 class="text-center text-4xl mt-10">Members</h2>
+        <div
+          class="hidden flex h-16 w-96 mx-auto border-black mt-6 mb-2 my-auto"
+          id="mem-cont"
+        ></div>
+        <button class="but w-2/5 p-2 rounded-lg block mx-auto mt-16" id="add">
+          Add Members
+        </button>
+        <form
+          class="form hidden text-center w-full mx-auto mt-10"
+          onsubmit="return false"
+          action=""
+        >
+          <label class="w-1/5 mx-auto mt-6 mx-3" for="">
+            <p class="mr-10 inline-block">Enter Username:</p>
+          </label>
+          <input
+            class="focus:opacity-50 border p-1 w-1/4 rounded mx-auto mt-1 mx-3 username"
+            type="text"
+            name="user"
+            required
+          />
+          <button
+            class="add-but w-12 mt-4 mx-3 text-sm rounded-md px-2 py-1 bg-black text-white"
+            id="add-member"
+            type="submit"
+            value="Register"
+            name=""
+            id=""
+            required
+          >
+            Add
+          </button>
+          <p class="member-error mt-4 text-xs text-red-500"></p>
+        </form>
+      </div>
     </div>
 
-    
-    
     <script src="../scripts/member.js"></script>
-</body>
+  </body>
 </html>

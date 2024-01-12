@@ -1,42 +1,95 @@
+const token = localStorage.getItem('accessToken');
+
 function addToMyPolls() {
-    var question = document.querySelector('#question').value;
-    var choice1 = document.querySelector('#choice1').value;
-    var choice2 = document.querySelector('#choice2').value;
+  var question = document.querySelector('#question').value;
+  var choice1 = document.querySelector('#choice1').value;
+  var choice2 = document.querySelector('#choice2').value;
 
-    if (!question.trim() || !choice1.trim() || !choice2.trim()) {
-        alert('Question, Choice1, and Choice2 are required.');
-        return;
-    }
+  if (!question.trim() || !choice1.trim() || !choice2.trim()) {
+    alert('Question, Choice1, and Choice2 are required.');
+    return;
+  }
 
-    var choices = [choice1, choice2];
+  let option1 = choice1;
+  let option2 = choice2;
+  let option3 = '';
+  let option4 = '';
+  let option5 = '';
 
-    for (var i = 3; i <= 5; i++) {
-        var choice = document.querySelector('#choice' + i).value;
-        if (choice.trim() !== "") {
-            choices.push(choice);
-        }
-    }
+  let choices = [];
+  for (var i = 3; i <= 5; i++) {
+    var choice = document.querySelector('#choice' + i).value;
+    choices.push(choice);
+  }
 
-    var poll = {
-        question: question,
-        choices: choices
-    };
+  if (choices.length > 0) {
+    option3 = choices[0];
+    choices.shift();
+  }
+  if (choices.length > 0) {
+    option4 = choices[0];
+    choices.shift();
+  }
+  if (choices.length > 0) {
+    option5 = choices[0];
+    choices.shift();
+  }
 
-    var existingPolls = JSON.parse(localStorage.getItem('myPolls')) || [];
+  var poll = {
+    question: question,
+    option1,
+    option2,
+    option3,
+    option4,
+    option5,
+  };
 
-    existingPolls.push(poll);
+  let Data = {
+    adminUsername: localStorage.getItem('username'),
+    poll: poll,
+  };
 
-    localStorage.setItem('myPolls', JSON.stringify(existingPolls));
+  fetch('http://localhost:9000/polls', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `bearer ${token}`,
+    },
+    body: JSON.stringify(Data),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.error) {
+        console.log(error);
+        alert('Hi');
+      } else {
+        Array.from(data.options).forEach((element) => {
+          console.log(element);
+        });
 
-    document.querySelector('#question').value = '';
-    for (var i = 1; i <= 5; i++) {
-        document.querySelector('#choice' + i).value = '';
-    }
+        window.location.href = './home.html';
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('error');
+    });
 
-    alert('Poll added to My Polls!');
-    window.location.href = './home.html';
+  var existingPolls = JSON.parse(localStorage.getItem('myPolls')) || [];
+
+  existingPolls.push(poll);
+
+  localStorage.setItem('myPolls', JSON.stringify(existingPolls));
+
+  document.querySelector('#question').value = '';
+  for (var i = 1; i <= 5; i++) {
+    document.querySelector('#choice' + i).value = '';
+  }
+
+  alert('Poll added to My Polls!');
+  window.location.href = './home.html';
 }
 
 document.getElementById('pollForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+  e.preventDefault();
 });
