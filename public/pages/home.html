@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body class="admin">
+    <title>Admin</title>
+
+    <header class="flex justify-between items-center mx-6 mb-20 ">
+        <h1 class="text-slate-950 text-2xl font-extrabold text-center justify-center">VoteSphere</h1>
+        <img id="sidebarToggle" class="w-16 h-16 cursor-pointer shadow-lg" src="../images/group.jpg" alt="">
+    </header>
+
+    <div id="sidebar" class="hidden fixed top-0 right-0 h-full w-64 bg-gray-800 text-white">
+        <img id="cancelToggle" class="w-16 h-16 cursor-pointer shadow-lg ml-auto" src="../images/cancel-3.png" alt="">
+        <button class="block w-full text-left p-2 mb-2 hover:bg-gray-700 " id="membersButton">Members</button>
+        <button class="block w-full text-left p-2 hover:bg-gray-700">Sign Out</button>
+    </div>
+
+    <main class="max-w-5xl min-h-screen mx-auto p-5">
+        <p class="w-full mb-12 text-center"><span class="text-lg text-slate-950">VoteSphere</span> aims to make fair votes where
+            members can vote on their choices while their rights are respected.</p>
+        <div class="flex flex-col shadow-sm rounded-lg px-5 py-2 my-poll">
+            <div class="w-full flex justify-between items-center mb-3 text-center ">
+                <h2 class="text-lg font-semibold mx-auto">My Polls</h2>
+            </div>
+            <div id="myPollsContainer"></div>
+            <button id="createPollBtn" class="bg-blue-900 p-2 rounded-md text-white block mt-16 w-1/6 mx-auto">Create Poll</button>
+        </div>
+    </main>
+
+
+<script src="../scripts/home.js"></script>
+
+</body>
+
+</html>
