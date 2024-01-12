@@ -52,11 +52,11 @@ function loadMyPolls() {
             <p class="w-full text-center">${poll.question}</p>
             <div class="flex gap-3">
                 <button class="text-left font-semibold" onclick="toggleAccordion('item${pollIndex}', this)">
-                    <img class="w-7" src="../Admin/images/download.jpg" alt="">
+                    <img class="w-7" src="../images/download.jpg" alt="">
                 </button>
                 <button class="w-12 h-12 object-contain rounded-full overflow-hidden flex ml-auto p-2"
                     onclick="deletePoll(${pollIndex})">
-                    <img src="../Admin/images/delete-but.png" alt="delete"
+                    <img src="../images/delete-but.png" alt="delete"
                         class="object-contain w-full h-full">
                 </button>
             </div>
