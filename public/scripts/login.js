@@ -40,8 +40,6 @@ submit.addEventListener('click', function (event) {
                 if (data.message == 'Invalid username'){
                 userError.style.display = 'flex';
                 invalidUser.innerText = data.message;
-                return
-                
             }
                 else if (data.message == 'Invalid password')
                 
